@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import cto from './img/passport1.jpg'
 import { fadeUp } from './lib/motion';
+import FloatingTechIcons from './components/FloatingTechIcons';
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -398,11 +399,16 @@ const Portfolio = () => {
 
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen relative flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
+      <section id="home" className="min-h-screen relative flex items-center justify-center px-4 sm:px-16 md:px-24 lg:px-8 pt-16">
+         {/* Floating tech icons background */}
+        <FloatingTechIcons />
+
+        {/* Optional subtle overlay for readability */}
+        {/* <div className="absolute inset-0 bg-black/20 dark:bg-black/30 z-1" /> */}
         <motion.div variants={fadeUp} initial="hidden" animate="visible" className="max-w-4xl mx-auto text-center mt-10">
           <div className="inline-block">
             <div className="mx-auto mb-6">
-              <div className="w-38 h-38 bg-linear-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-4xl font-bold shadow-2xl">
+              <div className="w-38 h-38 xs:w-48 xs:h-48 bg-linear-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-4xl font-bold shadow-2xl">
                  <Image
                   src={cto}
                   alt="Aliyu Ibrahim Umar"
