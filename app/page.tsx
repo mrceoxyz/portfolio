@@ -276,7 +276,7 @@ const Portfolio = () => {
                 >
                   {item.label}
                   {activeSection === item.id && (
-                    <span className="absolute -bottom-1 left-0 h-0.5 w-full bg-blue-400 rounded" />
+                    <span className="absolute -bottom-1 left-0 h-0.5 w-full rounded" />
                   )}
                 </button>
               ))}
@@ -312,7 +312,7 @@ const Portfolio = () => {
                 >
                   {item.label}
                   {activeSection === item.id && (
-                    <span className="absolute -bottom-1 left-0 h-0.5 w-full bg-blue-400 rounded" />
+                    <span className="absolute -bottom-1 left-0 h-0.5 w-full rounded" />
                   )}
                 </button>
               ))}
