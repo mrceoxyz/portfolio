@@ -1,7 +1,6 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
 
-import { Mail, Phone, Linkedin, Github, MapPin, Code, Cpu, Zap, ChevronDown, Menu, X, ExternalLink, Star, GitFork } from 'lucide-react';
+import { Mail, Phone, Linkedin, Github, MapPin, Code, Cpu, Zap, ChevronDown, Menu, X, ExternalLink } from 'lucide-react';
 import { motion } from "framer-motion";
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
@@ -234,6 +233,7 @@ const Portfolio = () => {
       {children}
     </motion.div>
   );
+  
 
 
   return (
@@ -262,16 +262,17 @@ const Portfolio = () => {
             </div>
             
             {/* Desktop Navigation */}
-            <div className="hidden md:flex gap-8 text-sm font-medium">
+            <div className="hidden md:flex space-x-8">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`relative transition ${
-                    activeSection === item.id
-                      ? "text-blue-400"
-                      : "text-gray-300 hover:text-white"
+                  className={`transition-all duration-300 ${
+                    activeSection === item.id ? 'text-blue-400' : 'text-gray-300 hover:text-white'
                   }`}
+                  style={{
+                    animation: `fadeIn 0.5s ease-out ${item.id}s both`
+                  }}
                 >
                   {item.label}
                   {activeSection === item.id && (
@@ -299,16 +300,15 @@ const Portfolio = () => {
               isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
             }`}
           >
-            <div className="hidden md:flex gap-8 text-sm font-medium">
+            <div className="py-4 space-y-2">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`relative transition ${
-                    activeSection === item.id
-                      ? "text-blue-400"
-                      : "text-gray-300 hover:text-white"
-                  }`}
+                  className="block w-full text-left py-2 px-4 hover:bg-slate-800 rounded transition-colors"
+                  style={{
+                    animation: isMenuOpen ? `slideIn 0.3s ease-out ${item.id}s both` : 'none'
+                  }}
                 >
                   {item.label}
                   {activeSection === item.id && (
@@ -320,6 +320,49 @@ const Portfolio = () => {
           </div>
         </div>
       </nav>
+      <style>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes slideIn {
+          from {
+            opacity: 0;
+            transform: translateX(-20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes scaleIn {
+          from {
+            opacity: 0;
+            transform: scale(0.9);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
+        }
+      `}</style>
       {/* <nav
         className={`fixed top-0 inset-x-0 z-50 transition-all ${
           scrolled
