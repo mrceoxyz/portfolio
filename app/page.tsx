@@ -4,7 +4,7 @@ import { Mail, Phone, Linkedin, Github, MapPin, Code, Cpu, Zap, ChevronDown, Men
 import { motion } from "framer-motion";
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import cto from './img/cto.jpg'
+import cto from './img/passport1.jpg'
 import { fadeUp } from './lib/motion';
 
 const Portfolio = () => {
