@@ -297,7 +297,7 @@ const Portfolio = () => {
           {/* Mobile Navigation */}
           <div 
             className={`md:hidden overflow-hidden transition-all duration-300 ${
-              isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+              isMenuOpen ? 'max-h-96 opacity-100 bg-linear-to-br from-slate-900 via-slate-800 to-slate-900 text-white' : 'max-h-0 opacity-0'
             }`}
           >
             <div className="py-4 space-y-2">
