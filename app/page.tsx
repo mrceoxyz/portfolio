@@ -402,12 +402,12 @@ const Portfolio = () => {
         <motion.div variants={fadeUp} initial="hidden" animate="visible" className="max-w-4xl mx-auto text-center mt-10">
           <div className="inline-block">
             <div className="mx-auto mb-6">
-              <div className="w-32 h-32 bg-linear-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-4xl font-bold shadow-2xl">
+              <div className="w-38 h-38 bg-linear-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-4xl font-bold shadow-2xl">
                  <Image
                   src={cto}
                   alt="Aliyu Ibrahim Umar"
-                  width={140}
-                  height={140}
+                  width={200}
+                  height={200}
                   className="rounded-full border-4 border-blue-500/30 shadow-xl mx-auto"
                 />
               </div>
@@ -416,13 +416,13 @@ const Portfolio = () => {
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-300">
             Aliyu Ibrahim Umar
           </h1>
-          <p className="text-lg sm:text-xl text-blue-400 mb-6 mt-2">
+          <p className="text-lg sm:text-xl text-blue-400 mb-3 mt-2">
             Software & Electrical Engineer
           </p>
-          <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
+          <p className="text-md text-gray-400 mb-12 max-w-2xl mx-auto">
             Bridging hardware and software domains with expertise in full-stack development and power systems engineering
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-4 mt-[-30px]">
             <button
               onClick={() => scrollToSection('contact')}
               className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
@@ -437,7 +437,7 @@ const Portfolio = () => {
             </button>
           </div>
           <button onClick={() => scrollToSection('about')}
-            className="mt-16 animate-bounce"
+            className="mt-10 animate-bounce"
           >
             <ChevronDown size={32} className="text-blue-400" />
           </button>
