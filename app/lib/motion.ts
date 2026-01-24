@@ -1,5 +1,6 @@
-// lib/motion.ts
-export const fadeUp = {
+import { Variants } from "framer-motion";
+
+export const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: {
     opacity: 1,
@@ -8,7 +9,7 @@ export const fadeUp = {
   },
 };
 
-export const stagger = {
+export const stagger: Variants = {
   hidden: {},
   visible: {
     transition: { staggerChildren: 0.12 },

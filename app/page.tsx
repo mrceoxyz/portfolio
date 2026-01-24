@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
 
 import { Mail, Phone, Linkedin, Github, MapPin, Code, Cpu, Zap, ChevronDown, Menu, X, ExternalLink, Star, GitFork } from 'lucide-react';
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import cto from './img/cto.jpg'
