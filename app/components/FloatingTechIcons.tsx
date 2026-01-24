@@ -43,7 +43,7 @@ export default function FloatingTechIcons() {
             ease: 'easeInOut',
           }}
         >
-          <Icon className="w-14 h-14 sm:w-20 sm:h-20 blur-[0.6px]" />
+          <Icon className="w-10 h-10 sm:w-10 sm:h-10 blur-[0.6px]" />
         </motion.div>
       ))}
     </div>
