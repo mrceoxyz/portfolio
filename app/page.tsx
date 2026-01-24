@@ -239,7 +239,88 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen bg-linear-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Navigation */}
-      <nav
+      <nav 
+        className={`fixed top-0 inset-x-0 z-50 transition-all ${
+          scrolled
+            ? "bg-slate-900/80 backdrop-blur-md shadow-lg border-b border-white/10"
+            : "bg-transparent"
+        }`}
+        style={{
+          transform: scrolled ? 'translateY(0)' : 'translateY(0)',
+          opacity: 1
+        }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <div 
+              className="text-xl font-bold bg-linear-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"
+              style={{
+                animation: 'fadeIn 0.5s ease-out'
+              }}
+            >
+              AIU
+            </div>
+            
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex gap-8 text-sm font-medium">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className={`relative transition ${
+                    activeSection === item.id
+                      ? "text-blue-400"
+                      : "text-gray-300 hover:text-white"
+                  }`}
+                >
+                  {item.label}
+                  {activeSection === item.id && (
+                    <span className="absolute -bottom-1 left-0 h-0.5 w-full bg-blue-400 rounded" />
+                  )}
+                </button>
+              ))}
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden transition-transform duration-300"
+              style={{
+                transform: isMenuOpen ? 'rotate(90deg)' : 'rotate(0deg)'
+              }}
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+
+          {/* Mobile Navigation */}
+          <div 
+            className={`md:hidden overflow-hidden transition-all duration-300 ${
+              isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+            }`}
+          >
+            <div className="hidden md:flex gap-8 text-sm font-medium">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className={`relative transition ${
+                    activeSection === item.id
+                      ? "text-blue-400"
+                      : "text-gray-300 hover:text-white"
+                  }`}
+                >
+                  {item.label}
+                  {activeSection === item.id && (
+                    <span className="absolute -bottom-1 left-0 h-0.5 w-full bg-blue-400 rounded" />
+                  )}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </nav>
+      {/* <nav
         className={`fixed top-0 inset-x-0 z-50 transition-all ${
           scrolled
             ? "bg-slate-900/80 backdrop-blur-md shadow-lg border-b border-white/10"
@@ -270,7 +351,7 @@ const Portfolio = () => {
             ))}
           </div>
         </div>
-      </nav>
+      </nav> */}
 
 
       {/* Hero Section */}
