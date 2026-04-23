@@ -770,7 +770,7 @@ const Portfolio = () => {
 
       {/* Footer */}
       <footer className="py-8 px-4 border-t border-slate-800 text-center text-gray-400">
-        <p>&copy; 2025 Aliyu Ibrahim Umar. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Aliyu Ibrahim Umar. All rights reserved.</p>
         {/* <p className="mt-2 text-sm">Built with React, TypeScript & Tailwind CSS</p> */}
       </footer>
     </div>
