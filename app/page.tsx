@@ -121,7 +121,10 @@ const Portfolio = () => {
       'Power System Design',
       'High Voltage (HV) & Low Voltage (LV)',
       'Schematic Drawings',
-      'Performance Analysis'
+      'Performance Analysis',
+      'Embedded system design (Industrial and Domestic automation)',
+      'Raspberry Pie/Arduino firmware programming',
+      'Electrical/Electronic circuit Simulation'
     ],
     software: [
       'Python',
@@ -129,6 +132,8 @@ const Portfolio = () => {
       'TypeScript',
       'C',
       'React',
+      'NextJS',
+      'TanStack',
       'MySQL',
       'PostgreSQL',
       'GIT'
@@ -144,9 +149,9 @@ const Portfolio = () => {
   const projects = [
     {
       name: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce solution with React frontend and PHP backend, featuring payment integration and inventory management.',
-      technologies: ['React', 'PHP', 'MySQL', 'Tailwind CSS'],
-      github: 'https://github.com/alieyuib/ecommerce-platform',
+      description: 'Full-stack e-commerce solution with React frontend and Python backend, featuring payment integration and inventory management.',
+      technologies: ['React', 'Python', 'MySQL', 'Tailwind CSS'],
+      github: 'https://github.com/mrceoxyz/ecommerce-platform',
       stars: 24,
       forks: 8
     },
@@ -154,7 +159,7 @@ const Portfolio = () => {
       name: 'IoT Power Monitoring System',
       description: 'Embedded system for real-time power consumption monitoring with web dashboard for data visualization and analytics.',
       technologies: ['C', 'Python', 'React', 'PostgreSQL'],
-      github: 'https://github.com/alieyuib/power-monitor',
+      github: 'https://github.com/mrceoxyz/power-monitor',
       stars: 15,
       forks: 5
     },
@@ -162,7 +167,7 @@ const Portfolio = () => {
       name: 'Circuit Design Toolkit',
       description: 'Web-based toolkit for electrical engineers to calculate circuit parameters and generate schematic diagrams.',
       technologies: ['TypeScript', 'React', 'Canvas API'],
-      github: 'https://github.com/alieyuib/circuit-toolkit',
+      github: 'https://github.com/mrceoxyz/circuit-toolkit',
       stars: 32,
       forks: 12
     },
@@ -170,7 +175,7 @@ const Portfolio = () => {
       name: 'Automation Control Panel',
       description: 'Industrial automation control interface for monitoring and managing automated production systems.',
       technologies: ['Python', 'React', 'WebSocket'],
-      github: 'https://github.com/alieyuib/automation-panel',
+      github: 'https://github.com/mrceoxyz/automation-panel',
       stars: 18,
       forks: 6
     }
@@ -566,7 +571,7 @@ const Portfolio = () => {
           </div>
           <div className="text-center mt-12">
             <a 
-              href="https://github.com/alieyuib" 
+              href="https://github.com/mrceoxyz" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-3 bg-slate-800 hover:bg-slate-700 rounded-lg border border-slate-600 hover:border-blue-500 transition-colors"
@@ -746,7 +751,7 @@ const Portfolio = () => {
                 Profile <ExternalLink className="w-3 h-3 ml-1" />
               </p>
             </a>
-            <a href="https://github.com/alieyuib" target="_blank" rel="noopener noreferrer" className="
+            <a href="https://github.com/mrceoxyz" target="_blank" rel="noopener noreferrer" className="
                   rounded-2xl p-6
                   bg-linear-to-br from-slate-800/70 to-slate-900/70
                   border border-white/10
@@ -757,7 +762,7 @@ const Portfolio = () => {
               <Github className="w-8 h-8 mx-auto mb-3 text-green-400 group-hover:scale-110 transition-transform" />
               <p className="text-sm text-gray-400">GitHub</p>
               <p className="text-gray-300 text-sm mt-1 flex items-center justify-center">
-                @alieyuib <ExternalLink className="w-3 h-3 ml-1" />
+                @mrceoxyz <ExternalLink className="w-3 h-3 ml-1" />
               </p>
             </a>
           </div>
